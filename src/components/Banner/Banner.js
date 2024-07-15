@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
-import headerImg from "../../assets/header-img.svg"
+import headerImg from "../../assets/sample.png"
 import './Banner.scss'
 
 const Banner = () => {
@@ -51,7 +51,7 @@ const Banner = () => {
                     <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    <img src={headerImg} alt="Header Img"/>
+                    <img id="header-img" src={headerImg} alt="Header Img"/>
                 </Col>
             </Row>
         </Container>

@@ -35,7 +35,7 @@ nav.navbar{
         align-items: center;
 
         .social-icon {
-            display: inline-block;
+            display: inline-flex;
             margin-left: 14px;
 
             a {
@@ -59,6 +59,10 @@ nav.navbar{
                     border-radius: 50%;
                     transform: scale(0);
                     transition: 0.3s ease-in-out;
+                }
+
+                #github-icon {
+                    width: 60%
                 }
 
                 &:hover img {

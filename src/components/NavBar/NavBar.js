@@ -7,6 +7,8 @@ import navIcon1 from '../../assets/linkedin-logo.svg';
 import navIcon2 from '../../assets/github-logo.svg';
 import navIcon3 from '../../assets/instagram-logo.svg';
 
+import details from '../../config/details';
+
 import './NavBar.scss'
 
 import React, { useState, useEffect } from 'react'
@@ -14,6 +16,8 @@ import React, { useState, useEffect } from 'react'
 const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home")
     const [scrolled, setScrolled] = useState(false)
+
+    const socialLinks = details.socialLinks;
     
     useEffect(() => {
         const onScroll = () => {
@@ -48,9 +52,9 @@ const NavBar = () => {
               </Nav>
               <span className='navbar-text'>
                 <div className='social-icon'>
-                    <a href="https://www.linkedin.com/in/nitish-uttamrao-thorat/" target='_blank'><img src={navIcon1} alt=""/></a>
-                    <a href="https://github.com/nitishthorat" target='_blank'><img src={navIcon2} alt=""/></a>
-                    <a href="https://www.instagram.com/nitishthorat"><img src={navIcon3} alt=""/></a>
+                    <a href={socialLinks.linkedIn} target='_blank'><img id="linkedin-icon" src={navIcon1} alt=""/></a>
+                    <a href={socialLinks.github} target='_blank'><img id="github-icon" src={navIcon2} alt=""/></a>
+                    <a href={socialLinks.instagram} target='_blank'><img id="instagram-icon" src={navIcon3} alt=""/></a>
                 </div>
                 <button className='vvd' onClick={() => console.log('connect')}><span>Let's connect</span></button>
               </span>

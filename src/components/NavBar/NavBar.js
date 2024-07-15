@@ -6,6 +6,7 @@ import logo from "../../assets/logo.svg";
 import navIcon1 from "../../assets/linkedin-logo.svg";
 import navIcon2 from "../../assets/github-logo.svg";
 import navIcon3 from "../../assets/instagram-logo.svg";
+import { Link } from "react-scroll";
 
 import details from "../../config/details";
 
@@ -18,6 +19,7 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const socialLinks = details.socialLinks;
+  const navLinks = details.navLinks;
 
   useEffect(() => {
     const onScroll = () => {
@@ -46,33 +48,25 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link
-              href="#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
-              className={
-                activeLink === "skills" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
+            {navLinks.map((link, index) => (
+              <Nav.Link
+                href="/"
+                className={
+                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("home")}
+              >
+                <Link
+                  to={link.ref}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  {link.name}
+                </Link>
+              </Nav.Link>
+            ))}
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -86,9 +80,17 @@ const NavBar = () => {
                 <img id="instagram-icon" src={navIcon3} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
-              <span>Let's connect</span>
-            </button>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <button>
+                <span>Let's connect</span>
+              </button>
+            </Link>
           </span>
         </Navbar.Collapse>
       </Container>

@@ -1,4 +1,14 @@
 const details = {
+  navLinks: [
+    {
+      name: "Home",
+      ref: "home",
+    },
+    {
+      name: "Skills",
+      ref: "skill",
+    },
+  ],
   socialLinks: {
     linkedIn: "https://www.linkedin.com/in/nitish-uttamrao-thorat/",
     github: "https://github.com/nitishthorat",

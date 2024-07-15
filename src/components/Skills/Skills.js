@@ -1,67 +1,80 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Skills.scss"
-
+import "./Skills.scss";
+import details from "../../config/details";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 const Skills = () => {
-    const responsive = {
-        superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 5
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 3
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1
-        }
-      };
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+  const description = details.skillsDescription;
+  const skills = details.skills;
 
   return (
-    <section className='skill'>
-        <Container>
-            <Row>
-                <Col>
-                    <div className='skill-bx'>
-                        <h2>
-                            Skills
-                        </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <Carousel responsive={responsive} infinite={true} className='skill-slider'>
-                            <div className='item'>
-                                <h5>Angular</h5>
-                            </div>
-                            <div className='item'>
-                                <h5>React</h5>
-                            </div>
-                            <div className='item'>
-                                <h5>Node.js</h5>
-                            </div>
-                            <div className='item'>
-                                <h5>MySQL</h5>
-                            </div>
-                            <div className='item'>
-                                <h5>MongoDB</h5>
-                            </div>
-                            <div className='item'>
-                                <h5>Python</h5>
-                            </div>
-                        </Carousel>
+    <section className="skill">
+      <Container>
+        <Row>
+          <Col>
+            <div className="skill-bx">
+              <h2>Skills & Technologies</h2>
+              <p>{description}</p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                className="skill-slider"
+              >
+                {skills.map((skill, index) => (
+                  // key attribute is important for performance and to avoid potential issues
+                  <div key={index} className="item">
+                    <div className="circular-progress-bar">
+                      <CircularProgressbar
+                        value={skill.percentage}
+                        text={`${skill.percentage}`}
+                        styles={buildStyles({
+                          rotation: 0.25,
+                          strokeLinecap: "round",
+                          textSize: "16px",
+                          pathTransitionDuration: 0.5,
+                          pathColor: `rgba(110, 50, 165, ${
+                            skill.percentage / 100
+                          })`,
+                          textColor: "#fff",
+                          trailColor: "#151515",
+                          backgroundColor: "#3e98c7",
+                        })}
+                      />
                     </div>
-                </Col>
-            </Row>
-        </Container>
+                    <h5 class="skill-name">{skill.name}</h5>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

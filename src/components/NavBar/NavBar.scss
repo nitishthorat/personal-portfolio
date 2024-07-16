@@ -180,4 +180,10 @@ nav.navbar {
       }
     }
   }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
 }

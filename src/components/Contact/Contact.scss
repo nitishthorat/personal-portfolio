@@ -81,4 +81,31 @@
       }
     }
   }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+      max-width: 1046px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .container {
+      max-width: 936px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 100px 0;
+    }
+    img {
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    form {
+      margin: 0 4%;
+    }
+  }
 }

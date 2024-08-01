@@ -56,9 +56,7 @@ const Skills = () => {
                           strokeLinecap: "round",
                           textSize: "16px",
                           pathTransitionDuration: 0.5,
-                          pathColor: `rgba(110, 50, 165, ${
-                            skill.percentage / 100
-                          })`,
+                          pathColor: `#2f40ac`,
                           textColor: "#fff",
                           trailColor: "#151515",
                           backgroundColor: "#3e98c7",

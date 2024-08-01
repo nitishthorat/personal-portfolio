@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import contactImg from "../../assets/contact-img.svg";
+import contactImg from "../../assets/contact-img.png";
 import "./Contact.scss";
 import { HandIndexFill } from "react-bootstrap-icons";
 

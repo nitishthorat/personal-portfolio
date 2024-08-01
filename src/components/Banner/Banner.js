@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../../assets/header-img.svg";
+import headerImg from "../../assets/header-img.png";
 import "./Banner.scss";
 import details from "../../config/details";
 import { Link } from "react-scroll";

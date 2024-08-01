@@ -52,7 +52,7 @@ const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7} className="left-col">
+          <Col md={12} lg={7} className="left-col">
             <span className="tagline">Welcome to My Portfolio</span>
             <h1>
               {`Hi I'm Nitish, `}
@@ -71,7 +71,7 @@ const Banner = () => {
               </button>
             </Link>
           </Col>
-          <Col xs={12} md={6} xl={5}>
+          <Col md={12} lg={5}>
             <img src={headerImg} alt="Header Img" />
           </Col>
         </Row>

@@ -8,6 +8,10 @@
 
   .left-col {
     text-align: start;
+
+    h1 {
+      min-height: 130px;
+    }
   }
 
   .tagline {
@@ -79,6 +83,10 @@
   @media (max-width: 576px) {
     .container {
       width: 92%;
+
+      h1 {
+        font-size: 52px;
+      }
     }
   }
 }

@@ -66,7 +66,7 @@ const Banner = () => {
               offset={-70}
               duration={500}
             >
-              <button onClick={() => console.log("connect")}>
+              <button>
                 Let's Connect <ArrowRightCircle size={25} />
               </button>
             </Link>

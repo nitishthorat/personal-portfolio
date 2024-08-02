@@ -49,23 +49,20 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {navLinks.map((link, index) => (
-              <Nav.Link
-                href="/"
+              <Link
+                to={link.ref}
+                key={index}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
                 onClick={() => onUpdateActiveLink("home")}
               >
-                <Link
-                  to={link.ref}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  {link.name}
-                </Link>
-              </Nav.Link>
+                {link.name}
+              </Link>
             ))}
           </Nav>
           <span className="navbar-text">

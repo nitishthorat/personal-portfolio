@@ -63,7 +63,7 @@ const Skills = () => {
                         })}
                       />
                     </div>
-                    <h5 class="skill-name">{skill.name}</h5>
+                    <h5 className="skill-name">{skill.name}</h5>
                   </div>
                 ))}
               </Carousel>

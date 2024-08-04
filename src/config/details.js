@@ -1,3 +1,7 @@
+import omimedsImg from "../assets/projects/omnimeds.jpg";
+import connectifyImg from "../assets/projects/connectify.jpg";
+import diceImg from "../assets/projects/dice-game.jpg";
+
 const details = {
   navLinks: [
     {
@@ -7,6 +11,10 @@ const details = {
     {
       name: "Skills",
       ref: "skill",
+    },
+    {
+      name: "Projects",
+      ref: "projects",
     },
   ],
   socialLinks: {
@@ -42,6 +50,37 @@ const details = {
     {
       name: "MongoDB",
       percentage: "75",
+    },
+  ],
+  projects: [
+    {
+      title: "Omnimeds",
+      description:
+        "An e-commerce website for medicines which connects doctors and patients with prescription verification",
+      imgUrl: omimedsImg,
+      links: {
+        github: null,
+        activeL: null,
+      },
+    },
+    {
+      title: "Connectify",
+      description:
+        "An online chat application inspired by whatsapp with real time messaging and notifications using Socket.io",
+      imgUrl: connectifyImg,
+      links: {
+        github: "https://github.com/nitishthorat/connectify",
+        active: null,
+      },
+    },
+    {
+      title: "Dice Game",
+      description: "A two player dice game, the first one to score 100 wins",
+      imgUrl: diceImg,
+      links: {
+        github: "https://github.com/nitishthorat/piggame.github.io",
+        active: "https://nitishthorat.github.io/piggame.github.io/",
+      },
     },
   ],
 };

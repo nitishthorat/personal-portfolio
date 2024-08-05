@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../../assets/contact-img.png";
 import "./Contact.scss";
-import { HandIndexFill } from "react-bootstrap-icons";
+import axios from "axios";
 
 const Contact = () => {
   const formInitialDetails = {
@@ -24,7 +24,17 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { data } = axios
+      .post("http://localhost:2000/contact", formDetails)
+      .then((res) => {
+        console.log("Success: ");
+      })
+      .catch((error) => {
+        console.log("Error");
+      });
+  };
 
   return (
     <section className="contact" id="connect">
@@ -80,7 +90,7 @@ const Contact = () => {
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   ></textarea>
-                  <button type="submit">
+                  <button>
                     <span>{buttonText}</span>
                   </button>
                 </Col>

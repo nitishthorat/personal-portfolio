@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.75874850.css",
-    "main.js": "/personal-portfolio/static/js/main.9cc0b367.js",
+    "main.css": "/personal-portfolio/static/css/main.5e83ca09.css",
+    "main.js": "/personal-portfolio/static/js/main.9d05d199.js",
     "static/js/453.298f5782.chunk.js": "/personal-portfolio/static/js/453.298f5782.chunk.js",
     "static/media/header-img.png": "/personal-portfolio/static/media/header-img.d07a1cd5af827f36fd21.png",
     "static/media/contact-img.png": "/personal-portfolio/static/media/contact-img.fc5653f2f60189040a74.png",
@@ -9,7 +9,12 @@
     "static/media/omnimeds.jpg": "/personal-portfolio/static/media/omnimeds.d0f5df392f821581998a.jpg",
     "static/media/connectify.jpg": "/personal-portfolio/static/media/connectify.93d1c6065d2d6d6e51d1.jpg",
     "static/media/dice-game.jpg": "/personal-portfolio/static/media/dice-game.0cd5de859713c1636eae.jpg",
+    "static/media/mysql.png": "/personal-portfolio/static/media/mysql.ac85efe48cd8a1d123c3.png",
+    "static/media/angular.png": "/personal-portfolio/static/media/angular.d3315e790fdf8da66905.png",
     "static/media/footer-bg.png": "/personal-portfolio/static/media/footer-bg.7bd67c0f73571d0acc02.png",
+    "static/media/mongodb.png": "/personal-portfolio/static/media/mongodb.324e2fcabe3af8a6195a.png",
+    "static/media/python.png": "/personal-portfolio/static/media/python.3855ad95a6dc866c8897.png",
+    "static/media/react.png": "/personal-portfolio/static/media/react.20adfb35ae6a6e5817bf.png",
     "static/media/revicons.eot": "/personal-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/personal-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/personal-portfolio/static/media/revicons.e8746a624ed098489406.woff",
@@ -18,12 +23,12 @@
     "static/media/logo.svg": "/personal-portfolio/static/media/logo.eaf3c0bc058e0ed6471ba20dc0af6da2.svg",
     "index.html": "/personal-portfolio/index.html",
     "static/media/linkedin-logo.svg": "/personal-portfolio/static/media/linkedin-logo.721d5414c26365f117e71d46b6641cb2.svg",
-    "main.75874850.css.map": "/personal-portfolio/static/css/main.75874850.css.map",
-    "main.9cc0b367.js.map": "/personal-portfolio/static/js/main.9cc0b367.js.map",
+    "main.5e83ca09.css.map": "/personal-portfolio/static/css/main.5e83ca09.css.map",
+    "main.9d05d199.js.map": "/personal-portfolio/static/js/main.9d05d199.js.map",
     "453.298f5782.chunk.js.map": "/personal-portfolio/static/js/453.298f5782.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75874850.css",
-    "static/js/main.9cc0b367.js"
+    "static/css/main.5e83ca09.css",
+    "static/js/main.9d05d199.js"
   ]
 }

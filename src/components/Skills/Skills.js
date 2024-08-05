@@ -47,8 +47,8 @@ const Skills = () => {
                 {skills.map((skill, index) => (
                   // key attribute is important for performance and to avoid potential issues
                   <div key={index} className="item">
-                    <div className="circular-progress-bar">
-                      <CircularProgressbar
+                    {/* <div className="circular-progress-bar"> */}
+                    {/* <CircularProgressbar
                         value={skill.percentage}
                         text={`${skill.percentage}`}
                         styles={buildStyles({
@@ -61,9 +61,15 @@ const Skills = () => {
                           trailColor: "#151515",
                           backgroundColor: "#3e98c7",
                         })}
-                      />
-                    </div>
-                    <h5 className="skill-name">{skill.name}</h5>
+                      /> */}
+
+                    <img
+                      src={skill.icon}
+                      // className="skill-icons"
+                      style={skill.style}
+                    />
+                    {/* </div> */}
+                    {/* <h5 className="skill-name">{skill.name}</h5> */}
                   </div>
                 ))}
               </Carousel>

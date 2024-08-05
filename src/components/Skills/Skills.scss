@@ -20,7 +20,7 @@
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
-    margin: 14px 0 75px 0;
+    margin: 14px 0 30px 0;
   }
 
   .skill-slider {
@@ -28,15 +28,25 @@
     margin: 0 auto;
     position: relative;
 
-    .item img {
-      width: 62%;
-      margin: 0 auto 15px auto;
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1 / 1;
+
+      img {
+        width: 100%;
+      }
     }
 
-    .circular-progress-bar {
-      width: 62%;
-      margin: auto;
-    }
+    // .circular-progress-bar {
+    //   width: 62%;
+    //   aspect-ratio: 1/1;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+
+    // }
 
     .skill-name {
       margin-top: 30px;

@@ -1,6 +1,12 @@
 import omimedsImg from "../assets/projects/omnimeds.jpg";
 import connectifyImg from "../assets/projects/connectify.jpg";
 import diceImg from "../assets/projects/dice-game.jpg";
+import angularIcon from "../assets/skills/angular.png";
+import reactIcon from "../assets/skills/react.png";
+import pythonIcon from "../assets/skills/python.png";
+import mysqlIcon from "../assets/skills/mysql.png";
+import mongodbIcon from "../assets/skills/mongodb.png";
+import nodejsIcon from "../assets/skills/nodejs.png";
 
 const details = {
   navLinks: [
@@ -30,26 +36,50 @@ const details = {
     {
       name: "Angular",
       percentage: "90",
+      icon: angularIcon,
+      style: {
+        width: "60%",
+      },
     },
     {
       name: "React",
       percentage: "85",
+      icon: reactIcon,
+      style: {
+        width: "75%",
+      },
     },
     {
       name: "Python",
       percentage: "85",
+      icon: pythonIcon,
+      style: {
+        width: "100%",
+      },
     },
     {
       name: "Node.js",
       percentage: "75",
+      icon: nodejsIcon,
+      style: {
+        width: "85%",
+      },
     },
     {
       name: "MySQL",
       percentage: "80",
+      icon: mysqlIcon,
+      style: {
+        width: "80%",
+      },
     },
     {
       name: "MongoDB",
       percentage: "75",
+      icon: mongodbIcon,
+      style: {
+        width: "90%",
+      },
     },
   ],
   projects: [

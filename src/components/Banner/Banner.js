@@ -4,7 +4,6 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../../assets/header-img.png";
 import "./Banner.scss";
 import details from "../../config/details";
-import { Link } from "react-scroll";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -59,17 +58,10 @@ const Banner = () => {
               <span className="wrap">{text}</span>
             </h1>
             <p>{description}</p>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <button>
-                Let's Connect <ArrowRightCircle size={25} />
-              </button>
-            </Link>
+
+            <a href={`${process.env.PUBLIC_URL}/resume.pdf`} target="_blank">
+              Resume <ArrowRightCircle size={25} />
+            </a>
           </Col>
           <Col md={12} lg={5}>
             <img src={headerImg} alt="Header Img" />

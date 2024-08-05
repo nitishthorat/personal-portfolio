@@ -27,7 +27,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { data } = axios
-      .post("http://localhost:2000/contact", formDetails)
+      .post("http://localhost:8000/contact", formDetails)
       .then((res) => {
         console.log("Success: ");
       })

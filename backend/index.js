@@ -56,6 +56,10 @@ router.post("/api/contact", (req, res) => {
   });
 });
 
+router.get("/", (req, res) => {
+  res.send("App running");
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

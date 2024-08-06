@@ -27,7 +27,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { data } = axios
-      .post("/contact", formDetails)
+      .post("/api/contact", formDetails)
       .then((res) => {
         setIsMessageSent(true);
         setFormDetails(formInitialDetails);

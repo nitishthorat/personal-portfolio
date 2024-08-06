@@ -49,6 +49,14 @@
         font-weight: 400;
         color: #fff;
       }
+
+      &:-internal-autofill-selected {
+        background: rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+
+    .message-sent-text {
+      font-size: 20px;
     }
 
     button {

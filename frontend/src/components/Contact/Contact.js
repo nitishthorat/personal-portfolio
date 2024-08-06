@@ -14,7 +14,7 @@ const Contact = () => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
+  const [isMessageSent, setIsMessageSent] = useState(false);
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -29,11 +29,10 @@ const Contact = () => {
     const { data } = axios
       .post("http://localhost:8000/contact", formDetails)
       .then((res) => {
-        console.log("Success: ");
+        setIsMessageSent(true);
+        setFormDetails(formInitialDetails);
       })
-      .catch((error) => {
-        console.log("Error");
-      });
+      .catch((error) => {});
   };
 
   return (
@@ -90,9 +89,15 @@ const Contact = () => {
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   ></textarea>
-                  <button>
-                    <span>{buttonText}</span>
-                  </button>
+                  {!isMessageSent ? (
+                    <button>
+                      <span>Send</span>
+                    </button>
+                  ) : (
+                    <div className="message-sent-text">
+                      Your message has been sent!
+                    </div>
+                  )}
                 </Col>
                 {status.message && (
                   <Col>

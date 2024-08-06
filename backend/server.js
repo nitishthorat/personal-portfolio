@@ -2,30 +2,26 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-// const express = require("express");
-const bodyParser = require("body-parser");
-const fs = require("fs");
-const path = require("path");
+require("dotenv").config({ path: "../.env" });
 
-// server used to send send emails
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
 const port = process.env.PORT || 8000;
-// console.log(process.env.EMAIL_USER);
-// console.log(process.env.EMAIL_PASS);
-const jsonFilePath = path.join(__dirname, "data.json");
-app.use(bodyParser.json());
+const emailUser = process.env.EMAIL_USER;
+const password = process.env.EMAIL_PASSWORD;
+const service = process.env.EMAIL_SERVICE;
+const host = process.env.EMAIL_HOST;
 
 const contactEmail = nodemailer.createTransport({
-  service: "gmail",
-  host: "smtp.gmail.com",
+  service: service,
+  host: host,
   port: 587,
   secure: false,
   auth: {
-    user: "nitishthorat112@gmail.com",
-    pass: "vrte tqcv oxtn npjp",
+    user: emailUser,
+    pass: password,
   },
 });
 
@@ -38,13 +34,13 @@ contactEmail.verify((error) => {
 });
 
 router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
+  const name = `${req.body.firstName} ${req.body.lastName}`;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: "nitishthorat112@gmail.com",
+    to: emailUser,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>

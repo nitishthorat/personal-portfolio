@@ -27,7 +27,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { data } = axios
-      .post("/api/contact", formDetails)
+      .post(
+        "https://personal-portfolio-29k5bymsk-nitish-uttamrao-thorats-projects.vercel.app/api/contact",
+        formDetails
+      )
       .then((res) => {
         setIsMessageSent(true);
         setFormDetails(formInitialDetails);

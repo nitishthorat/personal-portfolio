@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config({ path: "../.env" });
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://personal-portfolio-eight-opal.vercel.app/" }));
 app.use("/", router);
 const port = process.env.PORT || 8000;
 const emailUser = process.env.EMAIL_USER;

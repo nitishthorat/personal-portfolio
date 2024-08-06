@@ -47,6 +47,8 @@ router.post("/api/contact", (req, res) => {
            <p>Phone: ${phone}</p>
            <p>Message: ${message}</p>`,
   };
+
+  res.setHeader("Access-Control-Allow-Origin", "*");
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json(error);

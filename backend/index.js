@@ -8,7 +8,7 @@ const app = express();
 
 // Define CORS options
 const corsOptions = {
-  origin: process.env.FRONTEND_URL, // Your front-end domain from .env
+  origin: "*", // Your front-end domain from .env
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // Enable cookies if needed
   optionsSuccessStatus: 204,
@@ -50,8 +50,6 @@ contactEmail.verify((error) => {
     console.log("Ready to Send");
   }
 });
-
-// Contact form route
 router.post("/api/contact", (req, res) => {
   const name = `${req.body.firstName} ${req.body.lastName}`;
   const email = req.body.email;

@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config({ path: "./.env" });
 
 const app = express();
 router.use(cors());
-app.use("/", router);
+app.use(express.json());
+app.use(router);
+
 const port = process.env.PORT || 8000;
 const emailUser = process.env.EMAIL_USER;
 const password = process.env.EMAIL_PASSWORD;

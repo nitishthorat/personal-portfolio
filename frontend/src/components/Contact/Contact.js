@@ -13,6 +13,8 @@ const Contact = () => {
     message: "",
   };
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [isMessageSent, setIsMessageSent] = useState(false);
   const [status, setStatus] = useState({});
@@ -27,10 +29,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { data } = axios
-      .post(
-        "https://personal-portfolio-29k5bymsk-nitish-uttamrao-thorats-projects.vercel.app/api/contact",
-        formDetails
-      )
+      .post(`${apiUrl}/contact`, formDetails)
       .then((res) => {
         setIsMessageSent(true);
         setFormDetails(formInitialDetails);

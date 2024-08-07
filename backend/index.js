@@ -8,14 +8,22 @@ const app = express();
 
 // Define CORS options
 const corsOptions = {
-  origin: process.env.FRONTEND_URL, // Your front-end domain
+  origin: process.env.FRONTEND_URL, // Your front-end domain from .env
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // Enable cookies if needed
   optionsSuccessStatus: 204,
 };
 
-router.use(cors(corsOptions));
+// Apply CORS middleware globally
+app.use(cors(corsOptions));
+
+// Use express.json() middleware to parse JSON request bodies
 app.use(express.json());
+
+// Handle preflight requests
+app.options("*", cors(corsOptions));
+
+// Apply the router to your app
 app.use(router);
 
 const port = process.env.PORT || 8000;
@@ -43,8 +51,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.options("*", cors(corsOptions));
-
+// Contact form route
 router.post("/api/contact", (req, res) => {
   const name = `${req.body.firstName} ${req.body.lastName}`;
   const email = req.body.email;
@@ -60,16 +67,16 @@ router.post("/api/contact", (req, res) => {
            <p>Message: ${message}</p>`,
   };
 
-  res.setHeader("Access-Control-Allow-Origin", "*");
   contactEmail.sendMail(mail, (error) => {
     if (error) {
-      res.json(error);
+      res.status(500).json(error);
     } else {
-      res.json({ code: 200, status: "Message Sent" });
+      res.status(200).json({ code: 200, status: "Message Sent" });
     }
   });
 });
 
+// Test route
 router.get("/", (req, res) => {
   res.send("App running");
 });

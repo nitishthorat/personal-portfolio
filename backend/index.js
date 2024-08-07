@@ -5,7 +5,16 @@ const nodemailer = require("nodemailer");
 require("dotenv").config({ path: "./.env" });
 
 const app = express();
-router.use(cors());
+
+// Define CORS options
+const corsOptions = {
+  origin: process.env.FRONTEND_URL, // Your front-end domain
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true, // Enable cookies if needed
+  optionsSuccessStatus: 204,
+};
+
+router.use(cors(corsOptions));
 app.use(express.json());
 app.use(router);
 
@@ -33,6 +42,8 @@ contactEmail.verify((error) => {
     console.log("Ready to Send");
   }
 });
+
+router.options("*", cors(corsOptions));
 
 router.post("/api/contact", (req, res) => {
   const name = `${req.body.firstName} ${req.body.lastName}`;

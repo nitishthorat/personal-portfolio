@@ -87,6 +87,17 @@ router.post("/api/contact", (req, res) => {
   });
 });
 
+router.post("/slack/events", (req, res) => {
+  const { challenge } = req.body;
+
+  // Respond with the challenge token to verify the Slack request
+  if (challenge) {
+    res.status(200).send({ challenge });
+  } else {
+    res.status(400).send({ error: "No challenge token found in request" });
+  }
+});
+
 // Test route
 router.get("/", (req, res) => {
   res.send("App running");

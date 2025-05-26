@@ -8,7 +8,7 @@ import details from "../../config/details";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designer"];
+  const toRotate = ["Web Developer", "Web Designer", "Mobile Developer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300);
   const period = 300;

@@ -1,12 +1,15 @@
 import omimedsImg from "../assets/projects/omnimeds.jpg";
 import connectifyImg from "../assets/projects/connectify.jpg";
 import diceImg from "../assets/projects/dice-game.jpg";
+import minesweeperImg from "../assets/projects/minesweeper.jpg";
+import snakeImg from "../assets/projects/snake-game.jpg";
 import angularIcon from "../assets/skills/angular.png";
 import reactIcon from "../assets/skills/react.png";
 import pythonIcon from "../assets/skills/python.png";
 import mysqlIcon from "../assets/skills/mysql.png";
 import mongodbIcon from "../assets/skills/mongodb.png";
 import nodejsIcon from "../assets/skills/nodejs.png";
+import reactNativeIcon from "../assets/skills/react-native.png";
 
 const details = {
   navLinks: [
@@ -81,6 +84,14 @@ const details = {
         width: "90%",
       },
     },
+    {
+      name: "React Native",
+      percentage: "75",
+      icon: reactNativeIcon,
+      style: {
+        width: "85%",
+      },
+    },
   ],
   projects: [
     {
@@ -110,6 +121,25 @@ const details = {
       links: {
         github: "https://github.com/nitishthorat/piggame.github.io",
         active: "https://nitishthorat.github.io/piggame.github.io/",
+      },
+    },
+    {
+      title: "Minesweeper Game",
+      description: "Developed the classic Minesweeper game",
+      imgUrl: minesweeperImg,
+      links: {
+        github: "https://github.com/nitishthorat/minesweeper-game",
+        active: "https://expo.dev/accounts/nitishthorat/projects/minesweeper",
+      },
+    },
+    {
+      title: "Snake Game",
+      description:
+        "A grid-based mobile Snake game with swipe controls, growing speed and random obstacles.",
+      imgUrl: snakeImg,
+      links: {
+        github: "https://github.com/nitishthorat/snake-game",
+        active: "https://expo.dev/accounts/nitishthorat/projects/snake-game",
       },
     },
   ],

@@ -20,7 +20,7 @@ const Projects = () => {
               <p>
                 Here you'll find a collection of my web development projects,
                 showcasing a diverse range of technologies including PHP, HTML,
-                CSS, JavaScript, ReactJS, Angular, and more.
+                CSS, JavaScript, ReactJS, Angular, React Native and more.
               </p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav

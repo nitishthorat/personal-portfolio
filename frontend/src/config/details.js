@@ -2,7 +2,10 @@ import omimedsImg from "../assets/projects/omnimeds.jpg";
 import connectifyImg from "../assets/projects/connectify.jpg";
 import diceImg from "../assets/projects/dice-game.jpg";
 import minesweeperImg from "../assets/projects/minesweeper.jpg";
+import notesImg from "../assets/projects/notes-app.jpg";
 import snakeImg from "../assets/projects/snake-game.jpg";
+import colorPalleteImg from "../assets/projects/color-palette-generator.jpg";
+
 import angularIcon from "../assets/skills/angular.png";
 import reactIcon from "../assets/skills/react.png";
 import pythonIcon from "../assets/skills/python.png";
@@ -140,6 +143,26 @@ const details = {
       links: {
         github: "https://github.com/nitishthorat/snake-game",
         active: "https://expo.dev/accounts/nitishthorat/projects/snake-game",
+      },
+    },
+    {
+      title: "Color Palette Generator",
+      description:
+        "A minimalist tool to generate harmonious color palettes instantly. Built with modern UI and copy-to-clipboard functionality for seamless design inspiration.",
+      imgUrl: colorPalleteImg,
+      links: {
+        github: "https://github.com/nitishthorat/color-palette-generator",
+        active: null,
+      },
+    },
+    {
+      title: "Notes App",
+      description:
+        "A minimalist note-taking app built with Laravel Breeze featuring authentication, CSRF protection, and clean UI.",
+      imgUrl: notesImg,
+      links: {
+        github: "https://github.com/nitishthorat/laravel-notes-app",
+        active: null,
       },
     },
   ],

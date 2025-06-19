@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@botpress/webchat": "^3.0.0",
     "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.16.8",
     "@testing-library/jest-dom": "^5.17.0",

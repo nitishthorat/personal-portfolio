@@ -5,6 +5,7 @@ import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Projects from "./components/Projects/Projects";
+import Botpress from "./components/Botpress/Botpress";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <Botpress />
     </div>
   );
 }

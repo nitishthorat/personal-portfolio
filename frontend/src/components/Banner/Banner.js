@@ -25,6 +25,14 @@ const Banner = () => {
     };
   }, [text]);
 
+  const handleClick = () => {
+    if (window.botpress) {
+      window.botpress.open();
+    } else {
+      console.warn("Botpress is not initialized yet.");
+    }
+  };
+
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -59,9 +67,9 @@ const Banner = () => {
             </h1>
             <p>{description}</p>
 
-            <a href={`${process.env.PUBLIC_URL}/resume.pdf`} target="_blank">
-              Resume <ArrowRightCircle size={25} />
-            </a>
+            <button onClick={handleClick}>
+              Chat with Nexus <ArrowRightCircle size={22} />
+            </button>
           </Col>
           <Col md={12} lg={5}>
             <img src={headerImg} alt="Header Img" />

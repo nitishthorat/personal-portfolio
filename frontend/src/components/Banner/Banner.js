@@ -8,7 +8,7 @@ import details from "../../config/details";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designer", "Mobile Developer"];
+  const toRotate = ["Cosmic Guide"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300);
   const period = 300;
@@ -60,15 +60,15 @@ const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col md={12} lg={7} className="left-col">
-            <span className="tagline">Welcome to My Portfolio</span>
+            <span className="tagline">Welcome to Nitish's Galaxy</span>
             <h1>
-              {`Hi I'm Nitish, `}
+              {`Hi I'm Nexus, your `}
               <span className="wrap">{text}</span>
             </h1>
             <p>{description}</p>
 
             <button onClick={handleClick}>
-              Chat with Nexus <ArrowRightCircle size={22} />
+              Launch Chat <ArrowRightCircle size={22} />
             </button>
           </Col>
           <Col md={12} lg={5}>

@@ -8,10 +8,6 @@
 
   .left-col {
     text-align: start;
-
-    h1 {
-      min-height: 130px;
-    }
   }
 
   .tagline {
@@ -33,9 +29,20 @@
     font-size: 65px;
     font-weight: 700;
     letter-spacing: 0.8px;
-    line-height: 1;
+    // line-height: 1;
+    height: 153px;
     margin-bottom: 20px;
     display: block;
+
+    @media (max-width: 1200px) {
+      font-size: 60px;
+      height: 138px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 42px;
+      height: 100px;
+    }
   }
 
   p {
@@ -84,11 +91,6 @@
   @media (max-width: 576px) {
     .container {
       width: 92%;
-
-      h1 {
-        font-size: 52px;
-        min-height: 104px;
-      }
     }
   }
 }

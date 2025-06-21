@@ -55,11 +55,10 @@ const Projects = () => {
         <Row>
           <Col size={12}>
             <div>
-              <h2>Projects</h2>
+              <h2>Project Archive</h2>
               <p>
-                Here you'll find a collection of my web development projects,
-                showcasing a diverse range of technologies including PHP, HTML,
-                CSS, JavaScript, ReactJS, Angular, React Native and more.
+                These are the projects Nitish has deployed into the digital
+                universe. Want details? Just hover or launch one.
               </p>
 
               {/* Filter Inputs */}

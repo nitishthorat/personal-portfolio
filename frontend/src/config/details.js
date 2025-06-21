@@ -35,9 +35,9 @@ const details = {
     instagram: "https://www.instagram.com/nitishthorat",
   },
   description:
-    "A passionate web developer with a knack for creating dynamic and responsive websites. With a strong foundation in both front-end and back-end technologies, I strive to deliver seamless user experiences and robust web solutions.",
+    "You're about to explore the digital galaxy of Nitish Thorat, a developer who turns ideas into beautifully coded realities. From mobile apps to web systems, he crafts experiences that are out of this world.",
   skillsDescription:
-    "As a web developer, I possess a broad range of skills that enable me to design and build dynamic, responsive, and engaging web applications. With a strong foundation in both front-end and back-end development, I am equipped to create full-stack solutions that adhere to the latest web standards and deliver outstanding user experiences. Here are some of the key technologies and tools I use",
+    "I've scanned the systems — these are Nitish’s primary technologies. From building intuitive UIs to deploying scalable backends, each of these tools plays a part in his dev missions.",
   skills: [
     {
       name: "Angular",

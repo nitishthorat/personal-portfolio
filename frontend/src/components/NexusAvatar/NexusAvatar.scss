@@ -1,0 +1,62 @@
+.nexus-avatar.left-center {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  width: auto; // Let width adjust to avatar + bubble
+  height: auto;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: float 3s ease-in-out infinite;
+  pointer-events: none; // Keep if avatar is non-clickable
+  opacity: 0;
+  transform: translateY(-50%) scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.nexus-avatar.visible {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
+}
+
+.nexus-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nexus-hint-bubble {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  max-width: 170px;
+  width: max-content; // Expand to fit text naturally
+  white-space: normal;
+  word-break: break-word;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .nexus-avatar.left-center {
+    display: none;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-55%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+}

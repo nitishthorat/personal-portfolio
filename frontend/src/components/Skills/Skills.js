@@ -32,12 +32,12 @@ const Skills = () => {
   const skills = details.skills;
 
   return (
-    <section className="skill">
+    <section className="skill" id="skills">
       <Container>
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>Skills & Technologies</h2>
+              <h2>Planet Tech Bay</h2>
               <p>{description}</p>
               <Carousel
                 responsive={responsive}

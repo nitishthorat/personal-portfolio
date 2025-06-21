@@ -63,7 +63,6 @@
     overflow-y: auto;
     padding-right: 12px;
 
-    // Custom scrollbar styling
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
 
@@ -83,6 +82,106 @@
 
     &::-webkit-scrollbar-thumb:hover {
       background-color: #aaa;
+    }
+  }
+
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .filter-item {
+      flex: 1;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      background-color: #1f1f1f;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      height: 50px;
+      text-align: left;
+
+      &::placeholder {
+        text-align: center;
+        color: #bbb;
+        opacity: 1;
+      }
+    }
+
+    .tech-select {
+      .select__control {
+        background-color: #1f1f1f;
+        border-color: #fff;
+        border-radius: 50px;
+        color: #fff;
+        min-height: 50px;
+
+        display: flex;
+        align-items: center;
+        box-shadow: none;
+        padding: 0 1rem;
+      }
+
+      .select__menu {
+        background-color: #2a2a2a;
+        color: #fff;
+      }
+
+      .select__option {
+        background-color: #2a2a2a;
+        color: #fff;
+
+        &--is-focused {
+          background-color: #3a3a3a;
+        }
+
+        &--is-selected {
+          background-color: #444;
+        }
+      }
+
+      .select__multi-value {
+        background-color: #333;
+      }
+
+      .select__multi-value__label {
+        color: #eee;
+      }
+
+      .select__multi-value__remove:hover {
+        background-color: #555;
+        color: #fff;
+      }
+
+      .select__input-container {
+        height: 42px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+      }
+
+      .select__value-container {
+        padding: 0 !important;
+      }
+
+      .select__input-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 42px;
+      }
+
+      .select__placeholder {
+        color: #bbb;
+        margin: 0;
+      }
+
+      .select__indicator-separator {
+        display: none;
+      }
     }
   }
 }
@@ -187,4 +286,14 @@
   width: 35%;
   right: 0;
   z-index: -4;
+}
+
+@media (max-width: 767px) {
+  .filters {
+    flex-direction: column;
+
+    .filter-item {
+      width: 100%;
+    }
+  }
 }

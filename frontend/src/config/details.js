@@ -5,6 +5,7 @@ import minesweeperImg from "../assets/projects/minesweeper.jpg";
 import notesImg from "../assets/projects/notes-app.jpg";
 import snakeImg from "../assets/projects/snake-game.jpg";
 import colorPalleteImg from "../assets/projects/color-palette-generator.jpg";
+import devSnippetsImg from "../assets/projects/dev-snippets.png";
 
 import angularIcon from "../assets/skills/angular.png";
 import reactIcon from "../assets/skills/react.png";
@@ -105,9 +106,11 @@ const details = {
     { label: "Chakra UI", value: "Chakra UI" },
     { label: "CSS", value: "CSS" },
     { label: "CSS3", value: "CSS3" },
+    { label: "FastAPI", value: "FastAPI" },
     { label: "HTML", value: "HTML" },
     { label: "HTML5", value: "HTML5" },
     { label: "JavaScript", value: "JavaScript" },
+    { label: "JWT", value: "JWT" },
     { label: "Laravel", value: "Laravel" },
     { label: "LLM", value: "LLM" },
     { label: "MySQL", value: "MySQL" },
@@ -121,10 +124,43 @@ const details = {
     { label: "React.js", value: "React.js" },
     { label: "ReactJS", value: "ReactJS" },
     { label: "Socket.io", value: "Socket.io" },
+    { label: "Stored Procedures", value: "Stored Procedures" },
+    { label: "SQLAlchemy", value: "SQLAlchemy" },
+    { label: "Tailwind CSS", value: "Tailwind CSS" },
     { label: "TypeScript", value: "TypeScript" },
   ],
 
   projects: [
+    {
+      title: "Dev Snippets",
+      description:
+        "A full-stack snippet manager built with FastAPI and React, featuring secure auth, scalable MySQL schema, and modern UI with Tailwind CSS.",
+      imgUrl: devSnippetsImg,
+      technologies: [
+        "HTML",
+        "HTML5",
+        "CSS",
+        "CSS3",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "React.js",
+        "ReactJs",
+        "Python",
+        "Python3",
+        "FastAPI",
+        "MySQL",
+        "SQLAlchemy",
+        "JWT",
+        "SQL",
+        "Stored Procedures",
+        "Tailwind CSS",
+      ],
+      links: {
+        github: "https://github.com/nitishthorat/dev-snippets",
+        active: null,
+      },
+    },
     {
       title: "Omnimeds",
       description:
